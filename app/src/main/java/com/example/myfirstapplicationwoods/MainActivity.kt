@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main) // XML layout
 
+
+
         // Display name & ID
         val textView = findViewById<TextView>(R.id.textViewInfo)
         textView.text = "Andrew Woods\nStudent ID: 1356701"
@@ -29,5 +31,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent("com.example.myfirstapplicationwoods.SECOND_ACTIVITY")
             startActivity(intent)
         }
+
+        val btnViewImageActivity = findViewById<Button>(R.id.btnViewImageActivity)
+        btnViewImageActivity.setOnClickListener {
+            val intent = Intent(this, ImageActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
